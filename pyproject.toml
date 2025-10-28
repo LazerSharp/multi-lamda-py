@@ -1,0 +1,16 @@
+#[project]
+#name = "sam-uv-app"
+#version = "0.1.0"
+#requires-python = ">=3.9"
+
+[tool.uv.workspace]
+members = [
+    "layers/common",
+    "layers/thirdparty",
+    "functions/user_service",
+    "functions/order_service"
+]
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"

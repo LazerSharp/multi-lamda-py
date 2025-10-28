@@ -1,0 +1,19 @@
+[project]
+name = "order-service"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "aws-lambda-powertools",
+    "commonlib"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
+[tool.uv.sources]
+order_service = { path = "src/order_service" }
+commonlib = { workspace = true }
+
+[tool.pytest.ini_options]
+pythonpath = [ "src" ]

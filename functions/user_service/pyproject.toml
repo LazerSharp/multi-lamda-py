@@ -1,0 +1,20 @@
+[project]
+name = "user-service"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "aws-lambda-powertools",
+    "commonlib"
+]
+[tool.uv.sources]
+user_service = { path = "src/user_service" }
+commonlib = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [ "src" ]
+

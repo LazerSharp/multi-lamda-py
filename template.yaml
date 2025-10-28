@@ -1,0 +1,106 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  SAM + uv workspace application with reproducible builds,
+  multiple Lambdas, and shared layers.
+
+Globals:
+  Function:
+    Runtime: python3.9
+    Timeout: 10
+    MemorySize: 256
+    Tracing: Active
+    Environment:
+      Variables:
+        LOG_LEVEL: INFO
+        POWERTOOLS_SERVICE_NAME: sam-uv-app
+
+Resources:
+
+  ######################################
+  # Common Layer
+  ######################################
+  CommonLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: common-lib
+      Description: Shared utility functions (commonlib)
+      ContentUri: .aws-sam/build/common_layer
+      CompatibleRuntimes:
+        - python3.9
+      RetentionPolicy: Retain
+
+  ######################################
+  # Third-Party Layer
+  ######################################
+  ThirdPartyLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: thirdparty-lib
+      Description: Third-party dependencies (requests, etc.)
+      ContentUri: .aws-sam/build/thirdparty_layer
+      CompatibleRuntimes:
+        - python3.9
+      RetentionPolicy: Retain
+
+  ######################################
+  # User Service Lambda
+  ######################################
+  UserServiceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: user-service
+      Handler: user_service.app.lambda_handler
+      CodeUri: .aws-sam/build/user_service
+      Description: API for managing users
+      Layers:
+        - !Ref CommonLayer
+        - !Ref ThirdPartyLayer
+      Events:
+        GetUsers:
+          Type: Api
+          Properties:
+            Path: /users
+            Method: get
+        GetUserHealth:
+          Type: Api
+          Properties:
+            Path: /users/health
+            Method: get
+      Environment:
+        Variables:
+          SERVICE_NAME: user-service
+
+  ######################################
+  # Order Service Lambda
+  ######################################
+  OrderServiceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: order-service
+      Handler: order_service.app.lambda_handler
+      CodeUri: .aws-sam/build/order_service
+      Description: API for managing orders
+      Layers:
+        - !Ref CommonLayer
+        - !Ref ThirdPartyLayer
+      Events:
+        GetOrders:
+          Type: Api
+          Properties:
+            Path: /orders
+            Method: get
+        GetOrderHealth:
+          Type: Api
+          Properties:
+            Path: /orders/health
+            Method: get
+      Environment:
+        Variables:
+          SERVICE_NAME: order-service
+
+Outputs:
+  ApiUrl:
+    Description: "Base URL for API Gateway"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+
