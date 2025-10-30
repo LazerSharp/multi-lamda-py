@@ -252,6 +252,36 @@ Resources:
           Properties:
             Path: /api/endpoint40
             Method: get
+        
+
+      Environment:
+        Variables:
+          SERVICE_NAME: user-service
+
+  ######################################
+  # Order Service Lambda
+  ######################################
+  OrderServiceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: order-service
+      Handler: order_service.app.lambda_handler
+      CodeUri: .aws-sam/build/order_service
+      Description: API for managing orders
+      Layers:
+        - !Ref CommonLayer
+        - !Ref ThirdPartyLayer
+      Events:
+        GetOrders:
+          Type: Api
+          Properties:
+            Path: /orders
+            Method: get
+        GetOrderHealth:
+          Type: Api
+          Properties:
+            Path: /orders/health
+            Method: get
         Endpoint41:
           Type: Api
           Properties:
@@ -341,35 +371,6 @@ Resources:
           Type: Api
           Properties:
             Path: /api/endpoint60
-            Method: get
-
-      Environment:
-        Variables:
-          SERVICE_NAME: user-service
-
-  ######################################
-  # Order Service Lambda
-  ######################################
-  OrderServiceFunction:
-    Type: AWS::Serverless::Function
-    Properties:
-      FunctionName: order-service
-      Handler: order_service.app.lambda_handler
-      CodeUri: .aws-sam/build/order_service
-      Description: API for managing orders
-      Layers:
-        - !Ref CommonLayer
-        - !Ref ThirdPartyLayer
-      Events:
-        GetOrders:
-          Type: Api
-          Properties:
-            Path: /orders
-            Method: get
-        GetOrderHealth:
-          Type: Api
-          Properties:
-            Path: /orders/health
             Method: get
       Environment:
         Variables:
