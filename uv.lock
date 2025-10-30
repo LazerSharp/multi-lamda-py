@@ -260,8 +260,8 @@ name = "order-service"
 version = "0.1.0"
 source = { virtual = "functions/order_service" }
 dependencies = [
-    { name = "aws-lambda-powertools" },
     { name = "commonlib" },
+    { name = "thirdparty" },
 ]
 
 [package.dev-dependencies]
@@ -271,8 +271,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "aws-lambda-powertools" },
     { name = "commonlib", editable = "layers/common" },
+    { name = "thirdparty", editable = "layers/thirdparty" },
 ]
 
 [package.metadata.requires-dev]
@@ -485,8 +485,8 @@ name = "user-service"
 version = "0.1.0"
 source = { virtual = "functions/user_service" }
 dependencies = [
-    { name = "aws-lambda-powertools" },
     { name = "commonlib" },
+    { name = "thirdparty" },
 ]
 
 [package.dev-dependencies]
@@ -496,8 +496,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "aws-lambda-powertools" },
     { name = "commonlib", editable = "layers/common" },
+    { name = "thirdparty", editable = "layers/thirdparty" },
 ]
 
 [package.metadata.requires-dev]

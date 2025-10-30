@@ -4,7 +4,7 @@ set shell := ["bash", "-cu"]
 # === CONFIGURATION ===
 project := "sam-uv-app-v4"
 region := "us-east-1"
-s3_bucket := "plabs-deploy-artifacts-t0"
+s3_bucket := "plabs-deploy-artifacts-dev-098"
 stack_name := "sam-uv-stack-v4"
 template := "template.yaml"
 build_dir := ".aws-sam/build"

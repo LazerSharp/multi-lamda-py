@@ -3,12 +3,13 @@ name = "user-service"
 version = "0.1.0"
 requires-python = ">=3.9"
 dependencies = [
-    "aws-lambda-powertools",
+    "thirdparty",
     "commonlib"
 ]
 [tool.uv.sources]
 user_service = { path = "src/user_service" }
 commonlib = { workspace = true }
+thirdparty = { workspace = true }
 
 [dependency-groups]
 dev = [

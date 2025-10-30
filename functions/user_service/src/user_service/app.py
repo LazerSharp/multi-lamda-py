@@ -11,7 +11,7 @@ def list_users():
     context = app.lambda_context
     logger.info({"path": event.path, "request_id": context.aws_request_id})
     resp = utils.hello(str(context.aws_request_id))
-    return {"users": ["alice", "bob"], "request_id": context.aws_request_id, "common_hello": resp}
+    return {"users": ["alice", "bob", "Mr. X"], "request_id": context.aws_request_id, "common_hello": resp}
 
 @app.get("/users/health")
 def health():
