@@ -1,6 +1,8 @@
 # Use bash for scripting
 set shell := ["bash", "-cu"]
 
+export UV_LINK_MODE := "copy"
+
 # === CONFIGURATION ===
 project := "sam-uv-app-v4"
 region := "us-east-1"
@@ -12,6 +14,11 @@ build_dir := ".aws-sam/build"
 # === COMMANDS ===
 
 # Print current AWS region
+
+whoami:
+	aws sts get-caller-identity
+
+
 aws-region:
 	aws configure get region
 

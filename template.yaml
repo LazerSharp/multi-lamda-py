@@ -67,6 +67,282 @@ Resources:
           Properties:
             Path: /users/health
             Method: get
+        Endpoint1:
+          Type: Api
+          Properties:
+            Path: /api/endpoint1
+            Method: get
+        Endpoint2:
+          Type: Api
+          Properties:
+            Path: /api/endpoint2
+            Method: get
+        Endpoint3:
+          Type: Api
+          Properties:
+            Path: /api/endpoint3
+            Method: get
+        Endpoint4:
+          Type: Api
+          Properties:
+            Path: /api/endpoint4
+            Method: get
+        Endpoint5:
+          Type: Api
+          Properties:
+            Path: /api/endpoint5
+            Method: get
+        Endpoint6:
+          Type: Api
+          Properties:
+            Path: /api/endpoint6
+            Method: get
+        Endpoint7:
+          Type: Api
+          Properties:
+            Path: /api/endpoint7
+            Method: get
+        Endpoint8:
+          Type: Api
+          Properties:
+            Path: /api/endpoint8
+            Method: get
+        Endpoint9:
+          Type: Api
+          Properties:
+            Path: /api/endpoint9
+            Method: get
+        Endpoint10:
+          Type: Api
+          Properties:
+            Path: /api/endpoint10
+            Method: get
+        Endpoint11:
+          Type: Api
+          Properties:
+            Path: /api/endpoint11
+            Method: get
+        Endpoint12:
+          Type: Api
+          Properties:
+            Path: /api/endpoint12
+            Method: get
+        Endpoint13:
+          Type: Api
+          Properties:
+            Path: /api/endpoint13
+            Method: get
+        Endpoint14:
+          Type: Api
+          Properties:
+            Path: /api/endpoint14
+            Method: get
+        Endpoint15:
+          Type: Api
+          Properties:
+            Path: /api/endpoint15
+            Method: get
+        Endpoint16:
+          Type: Api
+          Properties:
+            Path: /api/endpoint16
+            Method: get
+        Endpoint17:
+          Type: Api
+          Properties:
+            Path: /api/endpoint17
+            Method: get
+        Endpoint18:
+          Type: Api
+          Properties:
+            Path: /api/endpoint19
+            Method: get
+        Endpoint20:
+          Type: Api
+          Properties:
+            Path: /api/endpoint20
+            Method: get
+        Endpoint21:
+          Type: Api
+          Properties:
+            Path: /api/endpoint21
+            Method: get
+        Endpoint22:
+          Type: Api
+          Properties:
+            Path: /api/endpoint22
+            Method: get
+        Endpoint23:
+          Type: Api
+          Properties:
+            Path: /api/endpoint23
+            Method: get
+        Endpoint24:
+          Type: Api
+          Properties:
+            Path: /api/endpoint24
+            Method: get
+        Endpoint25:
+          Type: Api
+          Properties:
+            Path: /api/endpoint25
+            Method: get
+        Endpoint26:
+          Type: Api
+          Properties:
+            Path: /api/endpoint26
+            Method: get
+        Endpoint27:
+          Type: Api
+          Properties:
+            Path: /api/endpoint27
+            Method: get
+        Endpoint28:
+          Type: Api
+          Properties:
+            Path: /api/endpoint29
+            Method: get
+        Endpoint30:
+          Type: Api
+          Properties:
+            Path: /api/endpoint30
+            Method: get
+        Endpoint31:
+          Type: Api
+          Properties:
+            Path: /api/endpoint31
+            Method: get
+        Endpoint32:
+          Type: Api
+          Properties:
+            Path: /api/endpoint32
+            Method: get
+        Endpoint33:
+          Type: Api
+          Properties:
+            Path: /api/endpoint33
+            Method: get
+        Endpoint34:
+          Type: Api
+          Properties:
+            Path: /api/endpoint34
+            Method: get
+        Endpoint35:
+          Type: Api
+          Properties:
+            Path: /api/endpoint35
+            Method: get
+        Endpoint36:
+          Type: Api
+          Properties:
+            Path: /api/endpoint36
+            Method: get
+        Endpoint37:
+          Type: Api
+          Properties:
+            Path: /api/endpoint37
+            Method: get
+        Endpoint38:
+          Type: Api
+          Properties:
+            Path: /api/endpoint39
+            Method: get
+        Endpoint40:
+          Type: Api
+          Properties:
+            Path: /api/endpoint40
+            Method: get
+        Endpoint41:
+          Type: Api
+          Properties:
+            Path: /api/endpoint41
+            Method: get
+        Endpoint42:
+          Type: Api
+          Properties:
+            Path: /api/endpoint42
+            Method: get
+        Endpoint43:
+          Type: Api
+          Properties:
+            Path: /api/endpoint43
+            Method: get
+        Endpoint44:
+          Type: Api
+          Properties:
+            Path: /api/endpoint44
+            Method: get
+        Endpoint45:
+          Type: Api
+          Properties:
+            Path: /api/endpoint45
+            Method: get
+        Endpoint46:
+          Type: Api
+          Properties:
+            Path: /api/endpoint46
+            Method: get
+        Endpoint47:
+          Type: Api
+          Properties:
+            Path: /api/endpoint48
+            Method: get
+        Endpoint49:
+          Type: Api
+          Properties:
+            Path: /api/endpoint49
+            Method: get
+        Endpoint50:
+          Type: Api
+          Properties:
+            Path: /api/endpoint50
+            Method: get
+        Endpoint51:
+          Type: Api
+          Properties:
+            Path: /api/endpoint51
+            Method: get
+        Endpoint52:
+          Type: Api
+          Properties:
+            Path: /api/endpoint52
+            Method: get
+        Endpoint53:
+          Type: Api
+          Properties:
+            Path: /api/endpoint53
+            Method: get
+        Endpoint54:
+          Type: Api
+          Properties:
+            Path: /api/endpoint54
+            Method: get
+        Endpoint55:
+          Type: Api
+          Properties:
+            Path: /api/endpoint55
+            Method: get
+        Endpoint56:
+          Type: Api
+          Properties:
+            Path: /api/endpoint56
+            Method: get
+        Endpoint57:
+          Type: Api
+          Properties:
+            Path: /api/endpoint58
+            Method: get
+        Endpoint59:
+          Type: Api
+          Properties:
+            Path: /api/endpoint59
+            Method: get
+        Endpoint60:
+          Type: Api
+          Properties:
+            Path: /api/endpoint60
+            Method: get
+
       Environment:
         Variables:
           SERVICE_NAME: user-service
